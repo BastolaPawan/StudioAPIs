@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>478987be-2b3e-4077-942f-30e0ec70f46b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,10 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="DTOs\" />
     <Folder Include="Services\" />
-    <Folder Include="Model\" />
   </ItemGroup>
 
 </Project>

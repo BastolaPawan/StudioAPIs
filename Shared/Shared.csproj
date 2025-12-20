@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\Implementations\" />
     <Folder Include="Middleware\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.15.0" />
   </ItemGroup>
 

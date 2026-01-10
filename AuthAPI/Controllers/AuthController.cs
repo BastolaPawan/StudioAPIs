@@ -29,7 +29,6 @@ namespace AuthAPI.Controllers
         {
             var result = await _authService.LoginAsync(request);
             if (!result.Success) return Unauthorized(result);
-
             return Ok(result);
         }
     }

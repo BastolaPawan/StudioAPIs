@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>eSewa Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .info {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #60bb46;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #4fa838;
+        }
+    </style>
+</head>
+<body>
+    <h2>🔐 eSewa Payment Gateway</h2>
+
+    <div class="info">
+        <p><strong>Transaction UUID:</strong> <span id="displayUuid"></span></p>
+        <p><strong>Amount:</strong> NPR 1,500.00</p>
+        <p><strong>Status:</strong> Redirecting to eSewa...</p>
+
+        <hr>
+
+        <p><strong>eSewa ID:</strong> 9806800001 / 2 / 3 / 4 / 5</p>
+        <p><strong>Password:</strong> Nepal@123</p>
+        <p><strong>MPIN:</strong> 1122</p>
+        <p><strong>Merchant ID / Service Code:</strong> EPAYTEST</p>
+        <p><strong>Token:</strong> 123456</p>
+    </div>
+
+
+    <form id="esewaForm" action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST">
+        <input type="hidden" name="amount" value="1500.00">
+        <input type="hidden" name="tax_amount" value="0">
+        <input type="hidden" name="total_amount" value="1500.00">
+        <input type="hidden" name="transaction_uuid" id="txnUuid" value="">
+        <input type="hidden" name="product_code" value="EPAYTEST">
+        <input type="hidden" name="product_service_charge" value="0.00">
+        <input type="hidden" name="product_delivery_charge" value="0.00">
+        <input type="hidden" name="success_url" value="https://localhost:7001/api/payment/esewa/callback/success">
+        <input type="hidden" name="failure_url" value="https://localhost:7001/api/payment/esewa/callback/failure">
+        <input type="hidden" name="signed_field_names" value="total_amount,transaction_uuid,product_code">
+        <input type="hidden" name="signature" id="sig" value="">
+
+        <button type="submit">Pay with eSewa →</button>
+    </form>
+
+    <script>
+        // PASTE YOUR VALUES HERE
+        const transactionUuid = "0d16ce08-a9f9-48c5-a92e-bae501242211";
+        const signature = "LtANvXu1ydnipR8sdhb3nRgJogGpA4zGCgAN1FZYBzg=";
+
+        // Set the values
+        document.getElementById('txnUuid').value = transactionUuid;
+        document.getElementById('sig').value = signature;
+        document.getElementById('displayUuid').textContent = transactionUuid;
+
+        // Optional: Auto-submit after 3 seconds
+        // setTimeout(() => document.getElementById('esewaForm').submit(), 3000);
+    </script>
+</body>
+</html>

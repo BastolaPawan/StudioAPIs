@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryAPI", "InventoryAPI\InventoryAPI.csproj", "{F2EB8E76-9C72-48F8-9825-CF4E0E621E63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentIntegrationAPI", "PaymentIntegrationAPI\PaymentIntegrationAPI.csproj", "{24D8AA43-71B1-444D-9A7C-301BA10C23EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F2EB8E76-9C72-48F8-9825-CF4E0E621E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2EB8E76-9C72-48F8-9825-CF4E0E621E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2EB8E76-9C72-48F8-9825-CF4E0E621E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D8AA43-71B1-444D-9A7C-301BA10C23EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D8AA43-71B1-444D-9A7C-301BA10C23EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D8AA43-71B1-444D-9A7C-301BA10C23EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D8AA43-71B1-444D-9A7C-301BA10C23EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
